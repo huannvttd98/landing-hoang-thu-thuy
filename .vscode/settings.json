@@ -1,0 +1,21 @@
+{
+    // Format on save
+    "editor.formatOnSave": true,
+
+    // Định dạng theo chuẩn Prettier (cài thêm extension nếu cần)
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // Cài đặt Prettier
+    "prettier.tabWidth": 2,
+    "prettier.useTabs": false,
+    "prettier.semi": true,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "prettier.bracketSpacing": true,
+    "prettier.arrowParens": "avoid"
+}
