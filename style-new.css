@@ -1246,6 +1246,51 @@ button {
   }
 }
 
+/* Zalo Link Button */
+.zalo-link {
+  position: fixed;
+  bottom: calc(var(--spacing-xl) + 140px); /* Above call-now button */
+  right: var(--spacing-xl);
+  width: 60px;
+  height: 60px;
+  background: #0068ff;
+  border-radius: var(--border-radius-full);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  z-index: 1002; /* Higher than call-now */
+  text-decoration: none;
+  animation: zaloFloat 3s ease-in-out infinite;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.zalo-link:hover {
+  background: #0052cc;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: var(--shadow-xl);
+}
+
+.zalo-link img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+@keyframes zaloFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 /* Call Now Button */
 .call-now {
   position: fixed;
@@ -1256,7 +1301,7 @@ button {
   background: #007bff;
   color: var(--white);
   border-radius: var(--border-radius-full);
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-xl);
@@ -1265,6 +1310,9 @@ button {
   z-index: 1001; /* Higher than back-to-top */
   text-decoration: none;
   animation: pulse 2s infinite;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .call-now:hover {
@@ -1318,12 +1366,30 @@ button {
 
 /* Mobile Responsive for Fixed Buttons */
 @media (max-width: 768px) {
+  .zalo-link {
+    width: 55px;
+    height: 55px;
+    bottom: calc(var(--spacing-lg) + 130px);
+    right: var(--spacing-lg);
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .zalo-link img {
+    width: 30px;
+    height: 30px;
+  }
+
   .call-now {
     width: 55px;
     height: 55px;
     bottom: calc(var(--spacing-lg) + 65px);
     right: var(--spacing-lg);
     font-size: var(--font-size-lg);
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .back-to-top {
