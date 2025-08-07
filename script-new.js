@@ -628,8 +628,19 @@ console.log('🚗 Landing page loaded successfully! Ready to serve customers.');
 const constIsCheckScreenMobile =
   window.matchMedia('(max-width: 768px)').matches;
 
-const runInit = () => {
-  console.log('Running initialization for mobile screen');
+var indexSlider = 0;
+// setInterval(() => {
+//   if (constIsCheckScreenMobile) {
+//     loopSliderService();
+//   }
+// }, 4 * 1000);
+// setInterval(() => {
+//   if (constIsCheckScreenMobile) {
+//     loopSliderValues();
+//   }
+// }, 4.5 * 1000);
+
+const intiServiceSlider = () => {
   if (constIsCheckScreenMobile) {
     const listClass = document.querySelectorAll('.service-card');
     for (let i = 0; i < listClass.length; i++) {
@@ -644,16 +655,7 @@ const runInit = () => {
     // Add any desktop-specific initialization code here
   }
 };
-var indexSlider = 0;
-runInit();
-
-setInterval(() => {
-  if (constIsCheckScreenMobile) {
-    loopSlider();
-  }
-}, 4 * 1000);
-
-const loopSlider = () => {
+const loopSliderService = () => {
   console.log('Looping slider to index:', indexSlider);
   const listClass = document.querySelectorAll('.service-card');
   const listCheckBoxService = document.querySelectorAll(
@@ -694,3 +696,72 @@ radioCheckboxService.forEach((checkbox, index) => {
     }
   });
 });
+
+// values slider for mobile view
+
+const initValuesSlider = () => {
+  console.log('Initializing values slider...');
+  if (constIsCheckScreenMobile) {
+    const listClass = document.querySelectorAll('.value-card');
+    console.log('List of values cards:', listClass);
+    for (let i = 0; i < listClass.length; i++) {
+      if (i == 0) {
+        listClass[i].classList.add('show-on-mobile');
+      } else {
+        listClass[i].classList.add('hide-on-mobile');
+      }
+    }
+  } else {
+    console.log('Desktop screen detected, initializing desktop features...');
+    // Add any desktop-specific initialization code here
+  }
+};
+var indexValuesSlider = 0;
+const loopSliderValues = () => {
+  console.log('Looping slider to index:', indexValuesSlider);
+  const listClass = document.querySelectorAll('.value-card');
+  const listCheckBoxValues = document.querySelectorAll(
+    'input[name="values-card"]'
+  );
+  console.log('List of values cards:', listCheckBoxValues);
+  indexValuesSlider++;
+  if (indexValuesSlider >= listClass.length) {
+    indexValuesSlider = 0; // Reset to first item if index exceeds length
+  }
+  for (let i = 0; i < listClass.length; i++) {
+    if (i == indexValuesSlider) {
+      listClass[i].classList.add('show-on-mobile');
+      listClass[i].classList.remove('hide-on-mobile');
+      listCheckBoxValues[i].checked = true; // Check the corresponding radio button
+    } else {
+      listClass[i].classList.add('hide-on-mobile');
+      listClass[i].classList.remove('show-on-mobile');
+      listCheckBoxValues[i].checked = false; // Uncheck the corresponding radio button
+    }
+  }
+};
+const radioCheckboxValues = document.querySelectorAll(
+  'input[name="values-card"]'
+);
+radioCheckboxValues.forEach((checkbox, index) => {
+  checkbox.addEventListener('click', () => {
+    const listClass = document.querySelectorAll('.value-card');
+    const valueCheckbox = checkbox.value;
+    for (let i = 0; i < listClass.length; i++) {
+      if (i == valueCheckbox) {
+        listClass[i].classList.add('show-on-mobile');
+        listClass[i].classList.remove('hide-on-mobile');
+      } else {
+        listClass[i].classList.add('hide-on-mobile');
+        listClass[i].classList.remove('show-on-mobile');
+      }
+    }
+  });
+});
+
+const runInit = () => {
+  intiServiceSlider();
+  initValuesSlider();
+};
+
+runInit();
