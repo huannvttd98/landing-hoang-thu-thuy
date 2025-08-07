@@ -20,6 +20,8 @@
   --gray-700: #495057;
   --gray-800: #343a40;
   --gray-900: #212529;
+  --blue-100: #e3f2fd;
+  --blue-200: #bbdefb;
 
   /* Typography */
   --font-family: 'Inter', sans-serif;
@@ -180,9 +182,9 @@ button {
 }
 
 .btn--outline:hover {
-  background-color: var(--gray-800);
+  background-color: var(--primary-color);
   color: var(--white);
-  border-color: var(--gray-800);
+  border-color: var(--blue-200);
 }
 
 .btn--large {
@@ -813,80 +815,110 @@ button {
 @media (max-width: 768px) {
   .pricing__grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-sm);
+    gap: 4px;
     margin-top: var(--spacing-2xl);
   }
 
   .pricing-card {
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius-md);
+    padding: 8px;
+    border-radius: var(--border-radius-sm);
+    min-width: 0;
+    overflow: hidden;
   }
 
   .pricing-card--popular {
     transform: none;
+    border-width: 1px;
   }
 
   .pricing-card--popular:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
   }
 
-  .pricing-card__header h3 {
-    font-size: var(--font-size-lg);
+  .pricing-card__badge {
+    font-size: 8px;
+    padding: 2px 6px;
+    top: -8px;
+  }
+
+  .pricing-card__header {
     margin-bottom: var(--spacing-sm);
   }
 
-  .price .amount {
-    font-size: var(--font-size-xl);
+  .pricing-card__header h3 {
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: var(--spacing-xs);
   }
 
   .price .currency {
-    font-size: var(--font-size-sm);
+    font-size: 8px;
+    order: -1;
+  }
+
+  .price .amount {
+    font-size: var(--font-size-lg);
+    line-height: 1;
   }
 
   .price .period {
-    font-size: var(--font-size-xs);
+    font-size: 8px;
+    margin-top: 2px;
   }
 
   .pricing-card__features {
-    margin-bottom: var(--spacing-lg);
-    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-xs);
+    font-size: 8px;
+    text-align: left;
   }
 
   .pricing-card__features li {
-    padding: var(--spacing-xs) 0;
-    line-height: 1.4;
+    padding: 1px 0;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .pricing-card .btn {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    font-size: var(--font-size-xs);
+    padding: 4px 8px;
+    font-size: 8px;
+    width: 100%;
+    white-space: nowrap;
   }
 }
 
 @media (max-width: 480px) {
   .pricing__grid {
-    gap: var(--spacing-xs);
+    gap: 2px;
   }
 
   .pricing-card {
-    padding: var(--spacing-sm);
+    padding: 6px;
   }
 
   .pricing-card__header h3 {
-    font-size: var(--font-size-base);
+    font-size: 10px;
   }
 
   .price .amount {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
   }
 
   .pricing-card__features {
-    font-size: 10px;
+    font-size: 7px;
   }
 
   .pricing-card .btn {
-    padding: var(--spacing-xs);
-    font-size: 10px;
+    padding: 3px 6px;
+    font-size: 7px;
   }
 }
 
@@ -945,6 +977,81 @@ button {
   color: var(--gray-600);
   flex-grow: 1;
   margin-bottom: var(--spacing-lg);
+}
+
+/* Process Section Responsive */
+@media (max-width: 768px) {
+  .process__steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .process-step {
+    padding: var(--spacing-xs);
+  }
+
+  .process-step__icon {
+    height: 50px;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .process-step__icon img {
+    max-height: 35px;
+    width: auto;
+  }
+
+  .process-step__title {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.2;
+  }
+
+  .process-step__desc {
+    font-size: var(--font-size-xs);
+    line-height: 1.3;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .process-step .btn {
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .process__steps {
+    gap: var(--spacing-xs);
+  }
+
+  .process-step {
+    padding: 4px;
+  }
+
+  .process-step__icon {
+    height: 40px;
+    margin-bottom: 4px;
+  }
+
+  .process-step__icon img {
+    max-height: 30px;
+  }
+
+  .process-step__title {
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  .process-step__desc {
+    font-size: 9px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .process-step .btn {
+    padding: 4px 6px;
+    font-size: 9px;
+  }
 }
 
 /* Testimonials Section */
