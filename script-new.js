@@ -624,3 +624,73 @@ function handleSwipeGesture() {
 }
 
 console.log('🚗 Landing page loaded successfully! Ready to serve customers.');
+
+const constIsCheckScreenMobile =
+  window.matchMedia('(max-width: 768px)').matches;
+
+const runInit = () => {
+  console.log('Running initialization for mobile screen');
+  if (constIsCheckScreenMobile) {
+    const listClass = document.querySelectorAll('.service-card');
+    for (let i = 0; i < listClass.length; i++) {
+      if (i == 0) {
+        listClass[i].classList.add('show-on-mobile');
+      } else {
+        listClass[i].classList.add('hide-on-mobile');
+      }
+    }
+  } else {
+    console.log('Desktop screen detected, initializing desktop features...');
+    // Add any desktop-specific initialization code here
+  }
+};
+var indexSlider = 0;
+runInit();
+
+setInterval(() => {
+  if (constIsCheckScreenMobile) {
+    loopSlider();
+  }
+}, 4 * 1000);
+
+const loopSlider = () => {
+  console.log('Looping slider to index:', indexSlider);
+  const listClass = document.querySelectorAll('.service-card');
+  const listCheckBoxService = document.querySelectorAll(
+    'input[name="service-slider"]'
+  );
+  console.log('List of service cards:', listCheckBoxService);
+  indexSlider++;
+  if (indexSlider >= listClass.length) {
+    indexSlider = 0; // Reset to first item if index exceeds length
+  }
+  for (let i = 0; i < listClass.length; i++) {
+    if (i == indexSlider) {
+      listClass[i].classList.add('show-on-mobile');
+      listClass[i].classList.remove('hide-on-mobile');
+      listCheckBoxService[i].checked = true; // Check the corresponding radio button
+    } else {
+      listClass[i].classList.add('hide-on-mobile');
+      listClass[i].classList.remove('show-on-mobile');
+      listCheckBoxService[i].checked = false; // Uncheck the corresponding radio button
+    }
+  }
+};
+const radioCheckboxService = document.querySelectorAll(
+  'input[name="service-slider"]'
+);
+radioCheckboxService.forEach((checkbox, index) => {
+  checkbox.addEventListener('click', () => {
+    const listClass = document.querySelectorAll('.service-card');
+    const valueCheckbox = checkbox.value;
+    for (let i = 0; i < listClass.length; i++) {
+      if (i == valueCheckbox) {
+        listClass[i].classList.add('show-on-mobile');
+        listClass[i].classList.remove('hide-on-mobile');
+      } else {
+        listClass[i].classList.add('hide-on-mobile');
+        listClass[i].classList.remove('show-on-mobile');
+      }
+    }
+  });
+});
