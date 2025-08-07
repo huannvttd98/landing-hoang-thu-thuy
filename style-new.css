@@ -30,7 +30,7 @@
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
   --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
+  --font-size-4xl: 1.55rem;
   --font-size-5xl: 3rem;
   --font-weight-light: 300;
   --font-weight-normal: 400;
@@ -44,7 +44,7 @@
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
+  --spacing-2xl: 1rem;
   --spacing-3xl: 4rem;
   --spacing-4xl: 5rem;
 
@@ -395,6 +395,7 @@ button {
   text-align: center;
   color: var(--white);
   max-width: 800px;
+  display: none;
 }
 
 .hero__title {
@@ -691,7 +692,7 @@ button {
 
 .values__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4 ,1fr);
   gap: var(--spacing-2xl);
 }
 
@@ -1077,6 +1078,7 @@ button {
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
   box-shadow: var(--shadow-sm);
+  cursor: pointer;
 }
 
 .contact-qr img {
@@ -1178,7 +1180,7 @@ button {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1.3fr;
   gap: var(--spacing-2xl);
   margin-bottom: var(--spacing-2xl);
 }
@@ -1572,4 +1574,8 @@ button {
 }
 .p-5 {
   padding: var(--spacing-xl);
+}
+
+.mt-10{
+  margin-top: var(--spacing-2xl);
 }
