@@ -679,7 +679,7 @@ button {
 
 .values__grid {
   display: grid;
-  grid-template-columns: repeat(auto ,minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr));
   gap: var(--spacing-2xl);
 }
 
@@ -807,6 +807,87 @@ button {
 .pricing-card__features li {
   padding: var(--spacing-sm) 0;
   color: var(--gray-700);
+}
+
+/* Mobile responsive for pricing */
+@media (max-width: 768px) {
+  .pricing__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-2xl);
+  }
+
+  .pricing-card {
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+  }
+
+  .pricing-card--popular {
+    transform: none;
+  }
+
+  .pricing-card--popular:hover {
+    transform: translateY(-3px);
+  }
+
+  .pricing-card__header h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .price .amount {
+    font-size: var(--font-size-xl);
+  }
+
+  .price .currency {
+    font-size: var(--font-size-sm);
+  }
+
+  .price .period {
+    font-size: var(--font-size-xs);
+  }
+
+  .pricing-card__features {
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-xs);
+  }
+
+  .pricing-card__features li {
+    padding: var(--spacing-xs) 0;
+    line-height: 1.4;
+  }
+
+  .pricing-card .btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing__grid {
+    gap: var(--spacing-xs);
+  }
+
+  .pricing-card {
+    padding: var(--spacing-sm);
+  }
+
+  .pricing-card__header h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .price .amount {
+    font-size: var(--font-size-lg);
+  }
+
+  .pricing-card__features {
+    font-size: 10px;
+  }
+
+  .pricing-card .btn {
+    padding: var(--spacing-xs);
+    font-size: 10px;
+  }
 }
 
 /* Process Section */
