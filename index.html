@@ -3,592 +3,601 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dịch Vụ Lái Xe Chuyên Nghiệp</title>
-    <meta
-      name="description"
-      content="Dịch vụ lái xe chuyên nghiệp, an toàn và tin cậy. Lái xe theo giờ, theo chuyến, doanh nghiệp với giá cả hợp lý."
-    />
-    <meta
-      name="keywords"
-      content="thuê lái xe, dịch vụ lái xe, lái xe theo giờ, lái xe doanh nghiệp, lái xe an toàn"
-    />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.ico" />
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style-new.css?v=1.0.4" />
-
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Dịch Vụ Lái Xe Hộ 365</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <!-- Header -->
-    <header class="header" id="header">
+    <header class="header">
       <div class="container">
-        <div class="header__logo">
-          <img src="images/logo_1.png" alt="Dịch Vụ Lái Xe Chuyên Nghiệp" />
+        <div class="header-content">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="images/logo.png" alt="ZStep" class="logo-img" />
+          </div>
+
+          <!-- Navigation -->
+          <nav class="navigation">
+            <ul class="nav-menu">
+              <li><a href="#features">Dịch vụ </a></li>
+              <li><a href="#operations">Bảng Giá</a></li>
+              <li><a href="#solutions">Quy Trình</a></li>
+              <li><a href="#benefits">Đánh Giá</a></li>
+              <li><a href="#reviews">Liên Hệ</a></li>
+            </ul>
+          </nav>
+
+          <!-- Action Buttons -->
+          <div class="header-actions">
+            <button class="btn-consultation">
+              <span class="phone-icon">📞</span>
+              Tư vân miễn phí
+            </button>
+          </div>
         </div>
-        <nav class="header__nav">
-          <ul class="nav-menu" id="nav-menu">
-            <li><a href="#services" class="nav-link">Dịch Vụ</a></li>
-            <li><a href="#pricing" class="nav-link">Bảng Giá</a></li>
-            <li><a href="#process" class="nav-link">Quy Trình</a></li>
-            <li><a href="#feedback" class="nav-link">Đánh Giá</a></li>
-            <li><a href="#contact" class="nav-link">Liên Hệ</a></li>
-          </ul>
-        </nav>
-        <button class="btn btn--primary header__cta">Đặt Lái Xe</button>
-        <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="banner">
-        <img src="images/banner.png" alt="Hero Background" />
-      </div>
+      <img src="images/banner.png" alt="">
     </section>
-    <!-- Services Section -->
-    <section id="services" class="services">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2 class="section-title">Dịch Vụ Lái Xe Chuyên Nghiệp</h2>
-          <p class="section-subtitle">Đa dạng loại hình phục vụ mọi nhu cầu</p>
-        </div>
-        <div class="services__grid">
-          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-card__image">
-              <img src="images/servicer_1.png" alt="Lái xe theo chuyến" />
-            </div>
-            <h3 class="service-card__title">Thuê lái xe theo chuyến</h3>
-            <p class="service-card__desc">
-              Dịch vụ lái xe hộ chuyên nghiệp, phục vụ theo lộ trình & quãng
-              đường đã đặt trước. <br />
-              Phù hợp cho khách thường xuyên tiếp khách, liên hoan, dự tiệc,
-              chúc Tết… đảm bảo an toàn & đúng giờ.
-              <br />
-              Tài xế lái xe hộ uy tín, thông thạo đường sá, lái xe cẩn thận.
-            </p>
-            <div class="service-card__price">Từ 250.000đ VND</div>
-          </div>
-          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card__image">
-              <img src="images/servicer_2.png" alt="Lái xe theo chuyến" />
-            </div>
-            <h3 class="service-card__title">Thuê lái xe theo giờ</h3>
-            <p class="service-card__desc">
-              Thuê lái xe theo giờ linh hoạt: 4h, 8h, 12h hoặc theo yêu cầu.
-              <br />
-              Thích hợp cho cá nhân, doanh nghiệp khi đi họp, tổ chức sự kiện,
-              gặp gỡ đối tác. <br />
-              Có thể di chuyển nhiều điểm trong cùng khung giờ mà không lo phát
-              sinh chi phí.
-            </p>
 
-            <div class="service-card__price">Từ 250.000đ VND</div>
-          </div>
-          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-card__image">
-              <img src="images/servicer_3.png" alt="Lái xe theo yêu cầu" />
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-content">
+          <!-- Left side - Image -->
+          <div class="stats-image">
+            <img
+              src="images/Limousine-bro.png"
+              alt="Customer Support Representative"
+              class="stats-img"
+            />
+            <!-- Floating stats cards -->
+
+            <div class="stat-card stat-card-2">
+              <div class="stat-label">Tỉ lệ phản hồi</div>
+              <div class="stat-value">100%</div>
             </div>
-            <h3 class="service-card__title">Lái xe hộ theo yêu cầu</h3>
-            <p class="service-card__desc">
-              Đáp ứng mọi nhu cầu: đi công tác, về quê, chơi golf, đón tiễn sân
-              bay… <br />
-              Lái xe phục vụ theo đúng yêu cầu đã đăng ký, an toàn, nhanh chóng,
-              lịch sự. <br />
-              Hỗ trợ khách cá nhân & tổ chức 24/7.
-            </p>
-            <div class="service-card__price">Thỏa thuận</div>
+
+            <!-- Decorative elements -->
+            <div class="decorative-dot dot-1"></div>
+            <div class="decorative-dot dot-2"></div>
+            <div class="decorative-dot dot-3"></div>
+            <div class="decorative-star"></div>
           </div>
-        </div>
-      </div>
-      <div class="nav-slider-services">
-        <div class="radio-service">
-          <input type="radio" name="service-slider" value="0" checked />
-          <label for="service1"></label>
-        </div>
-        <div class="radio-service">
-          <input type="radio" name="service-slider" value="1" />
-          <label for="service2"></label>
-        </div>
-        <div class="radio-service">
-          <input type="radio" name="service-slider" value="2" />
-          <label for="service3"></label>
+
+          <!-- Right side - Content -->
+          <div class="stats-text">
+            <h2 class="stats-title">Dịch Vụ Lái Xe Hộ 365</h2>
+            <p class="stats-description">
+              Thuê tài xế chuyên nghiệp, phục vụ 24/7 cho mọi nhu cầu di chuyển
+              của bạn. Đặt xe ngay – nhận tài xế chỉ sau vài phút!
+            </p>
+            <ul class="stats-features">
+              <li>
+                Giải pháp lái xe an toàn & tiện lợi cho cá nhân và doanh nghiệp
+              </li>
+              <li>
+                Bạn cần tài xế đưa đón khách, đi sự kiện, về quê hay công tác?
+              </li>
+              <li>Mang đến dịch vụ chuyên nghiệp – tận tâm – đúng giờ.</li>
+            </ul>
+            <button class="btn-learn-more">Tìm hiểu thêm</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Value Proposition Section -->
-    <section class="values">
+    <!-- Why Zstep Section -->
+    <section class="why-zstep-section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2 class="section-title">Tại Sao Chọn Chúng Tôi?</h2>
-        </div>
-        <div class="values__grid">
-          <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="value-card__image">
-              <img src="images/bx_support.png" alt="Luôn hỗ trợ 24/7" />
+        <div class="why-zstep-content">
+          <!-- Header with title and image -->
+          <div class="why-zstep-header">
+            <div class="why-zstep-text">
+              <h2 class="why-zstep-title">
+                Dịch Vụ Lái Xe Hộ 365<br />
+                Tại sao chọn chúng tôi?
+              </h2>
             </div>
-            <h3>Luôn hỗ trợ 24/7</h3>
-            <p>
-              Hỗ trợ & tư vấn 24/7: Chỉ cần cho chúng tôi biết điểm đi, điểm đến
-              và thời gian mong muốn dịch vụ lái xe hộ chuyên nghiệp của chúng
-              tôi sẽ sắp xếp tài xế phù hợp nhất cho bạn, bất kể ngày hay đêm.
-            </p>
-          </div>
-          <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="value-card__image">
-              <img src="images/icon3-1.png" alt="Đảm bảo an toàn" />
+            <div class="why-zstep-image">
+              <img
+                src="images/Business-support-rafiki.png"
+                alt="Customer Service Representative"
+                class="why-zstep-img"
+              />
+              <!-- Decorative elements -->
             </div>
-            <h3>Đảm bảo an toàn</h3>
-            <p>
-              An toàn tuyệt đối cho tài sản & phương tiện: Chúng tôi luôn kiểm
-              tra, đảm bảo xe & tài sản của khách an toàn trước – trong – sau
-              chuyến đi. Tài xế lái xe hộ uy tín, giàu kinh nghiệm, lái xe cẩn
-              thận và tôn trọng tài sản của bạn.
-            </p>
           </div>
-          <div class="value-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="value-card__image">
-              <img src="images/icon5.png" alt="Tài sản phương tiện" />
+
+          <!-- Feature Cards -->
+          <div class="feature-cards">
+            <!-- Card 1: Zalo Usage -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img
+                  src="images/Car driving-rafiki.png"
+                  alt="Zalo"
+                  class="feature-icon-img"
+                />
+              </div>
+              <p class="feature-description">
+                <h4 class="feature-title">Thuê lái xe theo chuyến</h4>
+                Dịch vụ lái xe hộ chuyên nghiệp, phục vụ theo lộ trình & quãng
+                đường đã đặt trước. Phù hợp cho khách thường xuyên tiếp khách,
+                liên hoan, dự tiệc, chúc Tết… đảm bảo an toàn & đúng giờ. Tài xế
+                lái xe hộ uy tín, thông thạo đường sá, lái xe cẩn thận.
+              </p>
             </div>
-            <h3>Thái độ phục vụ</h3>
-            <p>
-              Thân thiện & tận tâm: Không chỉ lái xe, chúng tôi đồng hành cùng
-              bạn: hỗ trợ lên xuống xe, mang hành lý, sẵn sàng giúp đỡ khi cần.
-              Luôn giữ thái độ lịch sự, tôn trọng và hỗ trợ hết mình.
-            </p>
-          </div>
-          <div class="value-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="value-card__image">
-              <img src="images/icon2.png" alt="Tài sản phương tiện" />
+
+            <!-- Card 2: Automation -->
+            <div class="feature-card">
+              <div class="feature-icon automation-icon">
+                <img
+                  src="images/driving-bro.png"
+                  alt="Automation"
+                  class="feature-icon-img"
+                />
+              </div>
+              <h3 class="feature-title">Thuê lái xe theo giờ</h3>
+              <p class="feature-description">
+                Thuê lái xe theo giờ linh hoạt: 4h, 8h, 12h hoặc theo yêu cầu.
+                Thích hợp cho cá nhân, doanh nghiệp khi đi họp, tổ chức sự kiện,
+                gặp gỡ đối tác. Có thể di chuyển nhiều điểm trong cùng khung giờ
+                mà không lo phát sinh chi phí.
+              </p>
             </div>
-            <h3>Nhân viên</h3>
-            <p>
-              Nhanh chóng – An toàn – Đúng giờ: Tài xế có nhiều năm kinh nghiệm
-              <br />
-              xử lý mọi tình huống trên đường. Đảm bảo đưa bạn đến nơi đúng giờ,
-              <br />
-              đúng hẹn, đồng thời tuân thủ tuyệt đối luật giao thông. <br />
-            </p>
+
+            <!-- Card 3: Two-way Interaction -->
+            <div class="feature-card">
+              <div class="feature-icon interaction-icon">
+                <img
+                  src="images/driving-amico.png"
+                  alt="Two-way Chat"
+                  class="feature-icon-img"
+                />
+              </div>
+              <h3 class="feature-title">Lái xe hộ theo yêu cầu</h3>
+              <p class="feature-description">
+                Đáp ứng mọi nhu cầu: đi công tác, về quê, chơi golf, đón tiễn
+                sân bay… Lái xe phục vụ theo đúng yêu cầu đã đăng ký, an toàn,
+                nhanh chóng, lịch sự. Hỗ trợ khách cá nhân & tổ chức 24/7.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="nav-slider-values mt-20">
-        <div class="radio-value">
-          <input type="radio" name="values-card" value="0" checked />
-        </div>
-        <div class="radio-value">
-          <input type="radio" name="values-card" value="1" />
-        </div>
-        <div class="radio-value">
-          <input type="radio" name="values-card" value="2" />
-        </div>
-        <div class="radio-value">
-          <input type="radio" name="values-card" value="3" />
         </div>
       </div>
     </section>
+
+    <!-- Conversion Rate Section -->
+    <section class="conversion-section">
+      <div class="container">
+        <div class="conversion-content">
+          <!-- Left side - Content -->
+          <div class="conversion-text">
+            <h2 class="conversion-title">
+              Hỗ trợ 24/7 Luôn sẵn sàng phục vụ bất kể ngày hay đêm.
+            </h2>
+            <p class="conversion-description">
+            Hỗ trợ & tư vấn 24/7: Chỉ cần cho chúng tôi biết điểm đi, điểm đến và thời gian mong muốn dịch vụ lái xe hộ chuyên nghiệp của chúng tôi sẽ sắp xếp tài xế phù hợp nhất cho bạn, bất kể ngày hay đêm.
+            </p>
+            <button class="btn-explore">Khám phá ngay →</button>
+          </div>
+
+          <!-- Right side - Charts -->
+          <div class="conversion-charts">
+            <!-- Conversion Rate Chart -->
+              <img src="images/Service 24_7-bro.png" alt="" style="width: 100%; height: auto; border-radius: 16px; margin-bottom: 20px;" />
+            </div>           
+
+            <!-- Decorative elements -->
+            <div class="chart-decorative-dot dot-green"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Retention Section -->
+    <section class="retention-section">
+      <div class="container">
+        <div class="retention-content">
+          <!-- Left side - Chat Interface Mockup -->
+          <div class="retention-mockup">
+             <img src="images/Credit-card-bro.png" alt="" style="width: 100%; height: auto; border-radius: 16px;">
+          </div>
+          <!-- Right side - Content -->
+          <div class="retention-text">
+            <h2 class="retention-title">
+             An toàn tuyệt đối: Bảo vệ tài sản & phương tiện trong suốt chuyến đi.
+            </h2>
+            <p class="retention-description">
+              An toàn tuyệt đối cho tài sản & phương tiện: Chúng tôi luôn kiểm tra, đảm bảo xe & tài sản của khách an toàn trước – trong – sau chuyến đi. Tài xế lái xe hộ uy tín, giàu kinh nghiệm, lái xe cẩn thận và tôn trọng tài sản của bạn.
+            </p>
+            <button class="btn-explore-retention">Khám phá ngay </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Conversion Rate Section -->
+  
 
     <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
+    <section class="pricing-section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2 class="section-title">Bảng Giá Dịch Vụ</h2>
-          <p class="section-subtitle">Giá cả minh bạch, không phát sinh</p>
-        </div>
-        <div class="pricing__grid">
-          <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="pricing-card__header">
-              <h3>Trước 22h</h3>
-              <div class="price">
-                <span class="amount">250.000</span>
-                <span class="period">VND / 5km đầu</span>
+        <div class="pricing-content">
+          <h2 class="pricing-title">Bảng giá dịch vụ</h2>
+          <p class="pricing-subtitle">Chọn gói phù hợp với nhu cầu của bạn</p>
+
+          <div class="pricing-cards">
+            <!-- Card 1: Trước 22h -->
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3 class="pricing-plan">Trước 22h</h3>
+                <div class="pricing-price">
+                  <span class="price-amount">250.000</span>
+                  <span class="price-currency">VNĐ / 5km đầu</span>
+                </div>
               </div>
-            </div>
-            <ul class="pricing-card__features">
-              <li>Từ 6-10 Km: + 20K/mỗi Km</li>
-              <li>Trên 10km: +15k/mỗi Km</li>
-              <li>Trên 30km: Thoả thuận</li>
-              <li>Phí chờ: 30K/30 phút chờ</li>
-              <li>Trời mưa: phụ thu 30K (hỗ trợ tài xế)</li>
-            </ul>
-            <a href="tel:0838128365" class="btn btn--outline">Gọi ngay</a>
-          </div>
-          <div
-            class="pricing-card pricing-card--popular"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="pricing-card__header">
-              <h3>22h-24h</h3>
-              <div class="price">
-                <span class="amount">270.000</span>
-                <span class="period">VND / 5km đầu</span>
+              <div class="pricing-features">
+                <div class="feature-item">
+                  <span class="feature-text">Từ 6-10 Km: + 20K/mỗi Km</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Trên 10km: +15k/mỗi Km</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Trên 30km: Thoả thuận</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Phí chờ: 30K/30 phút chờ</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text"
+                    >Trời mưa: phụ thu 30K (hỗ trợ tài xế)</span
+                  >
+                </div>
               </div>
+              <button class="btn-pricing btn-primary">Gọi ngay</button>
             </div>
-            <ul class="pricing-card__features">
-              <li>Từ 6-10 Km: + 25K/mỗi Km</li>
-              <li>Trên 10km: +20k/mỗi Km</li>
-              <li>Trên 30km: Thoả thuận</li>
-              <li>Phí chờ: 50K/30 phút chờ</li>
-              <li>Trời mưa: phụ thu 30K (hỗ trợ tài xế)</li>
-            </ul>
-            <a href="tel:0838128365" class="btn btn--primary">Gọi ngay</a>
-          </div>
-          <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="pricing-card__header">
-              <h3>Sau 24h</h3>
-              <div class="price">
-                <span class="amount">299.000</span>
-                <span class="period">VND / 5km đầu</span>
+
+            <!-- Card 2: 22h-24h (Featured) -->
+            <div class="pricing-card pricing-card-featured">
+              <div class="pricing-header">
+                <h3 class="pricing-plan">22h-24h</h3>
+                <div class="pricing-price">
+                  <span class="price-amount">270.000</span>
+                  <span class="price-currency">VNĐ / 5km đầu</span>
+                </div>
               </div>
+              <div class="pricing-features">
+                <div class="feature-item">
+                  <span class="feature-text">Từ 6-10 Km: + 25K/mỗi Km</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Trên 10km: +20k/mỗi Km</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Trên 30km: Thoả thuận</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Phí chờ: 50K/30 phút chờ</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text"
+                    >Trời mưa: phụ thu 30K (hỗ trợ tài xế)</span
+                  >
+                </div>
+              </div>
+              <button class="btn-pricing btn-primary">Gọi ngay</button>
             </div>
-            <ul class="pricing-card__features">
-              <li>Từ 6-10 Km: + 25K/mỗi Km</li>
-              <li>Trên 10km: +20k/mỗi Km</li>
-              <li>Trên 30km: Thoả thuận</li>
-              <li>Phí chờ: 70K/30 phút chờ</li>
-              <li>Trời mưa: phụ thu 30K (hỗ trợ tài xế)</li>
-            </ul>
-            <a href="tel:0838128365" class="btn btn--outline">Gọi ngay</a>
+
+            <!-- Card 3: Sau 24h -->
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h3 class="pricing-plan">Sau 24h</h3>
+                <div class="pricing-price">
+                  <span class="price-amount">299.000</span>
+                  <span class="price-currency">VNĐ / 5km đầu</span>
+                </div>
+              </div>
+              <div class="pricing-features">
+                <div class="feature-item">
+                  <span class="feature-text">Từ 6-10 Km: + 25K/mỗi Km</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Trên 10km: +20k/mỗi Km</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Trên 30km: Thoả thuận</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text">Phí chờ: 70K/30 phút chờ</span>
+                </div>
+                <div class="feature-item">
+                  <span class="feature-text"
+                    >Trời mưa: phụ thu 30K (hỗ trợ tài xế)</span
+                  >
+                </div>
+              </div>
+              <button class="btn-pricing btn-primary">Gọi ngay</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="process">
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
       <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2 class="section-title">
-            Phương Thức Đặt Lái Xe Hộ – Dịch vụ lái xe hộ 365
-          </h2>
-          <p class="section-subtitle">Đơn giản</p>
-        </div>
-        <div class="process__steps">
-          <div class="process-step" data-aos="fade-up" data-aos-delay="100">
-            <div class="process-step__icon">
-              <img src="images/icon1.png" alt="Đặt lịch" />
-            </div>
-            <h3 class="process-step__title">Gọi trực tiếp Hotline</h3>
-            <p class="process-step__desc">
-              Liên hệ ngay số [Số điện thoại] để được tư vấn và đặt tài xế nhanh
-              nhất. Đội ngũ tư vấn 24/7 sẽ hỗ trợ xác nhận lịch và sắp xếp tài
-              xế phù hợp.
-            </p>
-            <a href="tel:0838128365" class="btn btn--outline mt-10">Gọi ngay</a>
-          </div>
-          <div class="process-step" data-aos="fade-up" data-aos-delay="200">
-            <div class="process-step__icon">
-              <img src="images/icon2.png" alt="Xác nhận" />
-            </div>
-            <h3 class="process-step__title">Liên hệ qua Zalo</h3>
-            <p class="process-step__desc">
-              Nhắn tin hoặc gọi video qua Zalo để đặt xe, gửi lộ trình và nhận
-              báo giá nhanh chóng. Hỗ trợ trao đổi hình ảnh, định vị vị trí tiện
-              lợi.
-            </p>
-            <a href="https://zalo.me/0838128365" class="btn btn--outline mt-10">
-              Liên hệ Zalo
-            </a>
-          </div>
-          <div class="process-step" data-aos="fade-up" data-aos-delay="300">
-            <div class="process-step__icon">
-              <img src="images/icon3-1.png" alt="Phục vụ" />
-            </div>
-            <h3 class="process-step__title">Đặt qua fanpage Facebook</h3>
-            <p class="process-step__desc">
-              Kết nối với chúng tôi qua Fanpage Dịch vụ lái xe hộ 365, gửi tin
-              nhắn trực tiếp để được tư vấn và xác nhận chuyến đi. Luôn phản hồi
-              nhanh, hỗ trợ đặt lịch mọi lúc, mọi nơi.
-            </p>
-            <a href="#" class="btn btn--outline mt-10"> Liên hệ Facebook </a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="testimonials-content">
+          <h2 class="testimonials-title">Khách hàng nói gì về chúng tôi</h2>
 
-    <!-- Feedback Section -->
-    <section id="feedback" class="testimonials">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2 class="section-title">Khách Hàng Nói Gì Về Chúng Tôi</h2>
-          <p class="section-subtitle">Hơn 1000+ khách hàng hài lòng</p>
-        </div>
-        <div
-          class="testimonials__slider"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="testimonials__track" id="testimonials-track">
-            <div class="testimonial-card">
-              <div class="testimonial-card__content">
-                <div class="stars">★★★★★</div>
-                <blockquote>
-                  "Dịch vụ rất chuyên nghiệp, lái xe an toàn và đúng giờ. Tôi
-                  rất hài lòng với chất lượng phục vụ."
-                </blockquote>
+          <div class="testimonials-layout">
+            <!-- Left side - Stats -->
+            <div class="testimonials-stats">
+              <!-- Stat 1: Cost Reduction -->
+              <div class="stat-bubble stat-bubble-blue">
+                <div class="stat-value">Trên 90%</div>
+                <div class="stat-label">Khách hàng</div>
+                <div class="stat-decorative star-icon">✦</div>
               </div>
-              <div class="testimonial-card__author">
-                <img src="images/bui-quang-anh-vu.jpg" alt="Bùi Quang Anh Vũ" />
-                <div class="author-info">
-                  <h4>Bùi Quang Anh Vũ</h4>
-                  <p>Doanh nhân</p>
-                </div>
+
+              <!-- Stat 2: Rating Increase -->
+              <div class="stat-bubble stat-bubble-green">
+                <div class="stat-value">Tăng 3 lần</div>
+                <div class="stat-label">Đánh giá từ khách hàng</div>
+                <div class="stat-decorative dot-icon">●</div>
               </div>
             </div>
-            <div class="testimonial-card">
-              <div class="testimonial-card__content">
-                <div class="stars">★★★★★</div>
-                <blockquote>
-                  "Tài xế rất thân thiện và kinh nghiệm. Xe sạch sẽ, giá cả hợp
-                  lý. Tôi sẽ sử dụng dịch vụ thường xuyên."
-                </blockquote>
-              </div>
-              <div class="testimonial-card__author">
-                <img src="images/do-viet-dung.jpg" alt="Đỗ Việt Dũng" />
-                <div class="author-info">
-                  <h4>Đỗ Việt Dũng</h4>
-                  <p>Kỹ sư</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-card__content">
-                <div class="stars">★★★★★</div>
-                <blockquote>
+
+            <!-- Right side - Testimonial -->
+            <div class="testimonial-content">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
                   "Đặt lái xe cho công ty rất tiện lợi. Báo cáo chi tiết, tài xế
-                  đúng giờ. Hỗ trợ khách hàng tuyệt vời."
-                </blockquote>
-              </div>
-              <div class="testimonial-card__author">
-                <img
-                  src="images/doanh-nhan-tran-kim-chung.jpg"
-                  alt="Trần Kim Chung"
-                />
-                <div class="author-info">
-                  <h4>Trần Kim Chung</h4>
-                  <p>Giám đốc</p>
+                  đúng giờ. Hỗ trợ khách hàng tuyệt vời. Tài xế rất thân thiện
+                  và kinh nghiệm. Xe sạch sẽ, giá cả hợp lý. Tôi sẽ sử dụng dịch
+                  vụ thường xuyên."
+                </p>
+
+                <div class="testimonial-author">
+                  <div class="author-avatar">
+                    <img
+                      src="images/do-viet-dung.jpg"
+                      alt="Anh Đỗ Văn Tự"
+                      class="avatar-img"
+                    />
+                  </div>
+                  <div class="author-info">
+                    <div class="author-name">Nguyễn Văn Nam</div>
+                    <div class="author-title">Đại lý ô tô Ford</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-card__content">
-                <div class="stars">★★★★★</div>
-                <blockquote>
-                  "Dịch vụ đưa đón sân bay rất thuận tiện. Tài xế đến đúng giờ,
-                  lái xe an toàn và chu đáo."
-                </blockquote>
-              </div>
-              <div class="testimonial-card__author">
-                <img src="images/san_bay.jpg" alt="Nguyễn Thị Lan" />
-                <div class="author-info">
-                  <h4>Nguyễn Thị Lan</h4>
-                  <p>Nhân viên văn phòng</p>
-                </div>
+
+              <!-- Navigation -->
+              <div class="testimonial-navigation">
+                <button class="nav-btn nav-prev">←</button>
+                <button class="nav-btn nav-next">→</button>
               </div>
             </div>
-            <div class="testimonial-card">
-              <div class="testimonial-card__content">
-                <div class="stars">★★★★★</div>
-                <blockquote>
-                  "Thuê lái xe theo giờ rất tiết kiệm và hiệu quả. Tôi có thể đi
-                  nhiều nơi mà không lo về việc lái xe."
-                </blockquote>
-              </div>
-              <div class="testimonial-card__author">
-                <img
-                  src="https://picsum.photos/60/60?random=2"
-                  alt="Phạm Văn Hùng"
-                />
-                <div class="author-info">
-                  <h4>Phạm Văn Hùng</h4>
-                  <p>Chủ doanh nghiệp</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-card__content">
-                <div class="stars">★★★★★</div>
-                <blockquote>
-                  "Dịch vụ tuyệt vời cho các sự kiện quan trọng. Tài xế lịch sự,
-                  thời gian chính xác."
-                </blockquote>
-              </div>
-              <div class="testimonial-card__author">
-                <img
-                  src="https://picsum.photos/60/60?random=3"
-                  alt="Lê Thị Mai"
-                />
-                <div class="author-info">
-                  <h4>Lê Thị Mai</h4>
-                  <p>Event Manager</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="testimonials__nav">
-          <div class="testimonials__pagination">
-            <button class="pagination-dot active" data-slide="0"></button>
-            <button class="pagination-dot" data-slide="1"></button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section class="contact-section">
       <div class="container">
-        <div class="contact__grid">
-          <div class="contact__info" data-aos="fade-right">
-            <h2>Liên Hệ Đặt Lái Xe</h2>
-            <p class="contact__desc">
+        <div class="contact-content">
+          <!-- Left side - Contact Info -->
+          <div class="contact-info">
+            <h2 class="contact-title">Liên Hệ Đặt Lái Xe</h2>
+            <p class="contact-subtitle">
               Liên hệ với chúng tôi để được tư vấn và đặt lịch phục vụ
             </p>
+
+            <!-- QR Code and Zalo -->
             <div class="contact-methods">
-              <div class="contact-qr">
-                <img src="images/qr_zalo.png" alt="QR Code" />
-                <p>Quét mã QR để liên hệ nhanh</p>
+              <div class="qr-section">
+                <div class="qr-code">
+                  <img
+                    src="images/qr_zalo.png"
+                    alt="QR Code Zalo"
+                    class="qr-img"
+                  />
+                  <div class="qr-label">Quét mã QR để liên hệ nhanh</div>
+                </div>
               </div>
-              <a href="https://zalo.me/0838128365" class="contact-zalo">
-                <img src="images/zalo.png" alt="Zalo" />
-                <p>Chat với chúng tôi qua Zalo</p>
-              </a>
+
+              <div class="zalo-section">
+                <div class="zalo-icon">
+                  <img src="images/zalo.png" alt="Zalo" class="zalo-img" />
+                </div>
+                <div class="zalo-text">Chat với chúng tôi qua Zalo</div>
+              </div>
             </div>
-            <div class="contact-info">
+
+            <!-- Contact Details -->
+            <div class="contact-details">
               <div class="contact-item">
-                <span class="icon">📞</span>
-                <span>0838 128 365</span>
+                <span class="contact-icon">📞</span>
+                <span class="contact-text">0838 128 365</span>
               </div>
               <div class="contact-item">
-                <span class="icon">📧</span>
-                <span>dichvulaixeho365@gmail.com </span>
-              </div>
-              <div class="contact-item">
-                <span class="icon">📍</span>
-                <span>Địa chỉ công ty</span>
+                <span class="contact-icon">✉️</span>
+                <span class="contact-text">dichvulaixeho365@gmail.com</span>
               </div>
             </div>
           </div>
-          <div class="contact__form" data-aos="fade-left">
-            <form class="contact-form" id="contact-form">
-              <h3>Thư góp ý</h3>
+
+          <!-- Right side - Contact Form -->
+          <div class="contact-form-section">
+            <h3 class="form-title">Đặt lịch trước</h3>
+
+            <form class="contact-form">
               <div class="form-group">
-                <input type="text" id="name" placeholder="Họ và tên" required />
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Họ và tên"
+                  required
+                />
               </div>
+
               <div class="form-group">
                 <input
                   type="tel"
-                  id="phone"
+                  class="form-input"
                   placeholder="Số điện thoại"
                   required
                 />
               </div>
+
               <div class="form-group">
-                <select id="service" required>
+                <select class="form-select" required>
                   <option value="">Chọn dịch vụ</option>
-                  <option value="gio">Lái xe theo giờ</option>
-                  <option value="chuyen">Lái xe theo chuyến</option>
-                  <option value="yeu-cau">Lái xe theo yêu cầu</option>
-                  <option value="doanh-nghiep">Lái xe doanh nghiệp</option>
-                  <option value="su-kien">Lái xe sự kiện</option>
-                  <option value="duong-dai">Đưa đón sân bay</option>
+                  <option value="lai-xe-ho">Lái xe hộ</option>
+                  <option value="dua-don">Đưa đón</option>
+                  <option value="cong-tac">Công tác</option>
+                  <option value="su-kien">Sự kiện</option>
+                  <option value="khac">Khác</option>
                 </select>
               </div>
+
               <div class="form-group">
                 <textarea
-                  id="message"
+                  class="form-textarea"
                   placeholder="Ghi chú thêm (thời gian, địa điểm...)"
+                  rows="4"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn--primary btn--block">
-                Gửi Yêu Cầu
-              </button>
+
+              <button type="submit" class="btn-submit">Gửi Yêu Cầu</button>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer class="footer">
       <div class="container">
-        <div class="footer__grid">
-          <div class="footer__about">
-            <img src="images/logo_1.png" alt="Logo" class="footer__logo" />
-            <p>
+        <div class="footer-content">
+          <!-- Column 1: Logo and Description -->
+          <div class="footer-column">
+            <div class="footer-logo">
+              <img
+                src="images/logo.png"
+                alt="Dịch Vụ Lái Xe Hộ 365"
+                class="footer-logo-img"
+              />
+            </div>
+            <p class="footer-description">
               Dịch vụ lái xe chuyên nghiệp, an toàn và tin cậy với đội ngũ tài
               xế giàu kinh nghiệm.
             </p>
-            <div class="footer__social">
+            <div class="footer-social">
               <a href="#" class="social-link">
-                <img src="images/zalo.png" alt="Zalo" />
+                <img src="images/zalo.png" alt="Zalo" class="social-icon" />
+              </a>
+              <a href="#" class="social-link">
+                <img
+                  src="images/facebook.png"
+                  alt="Facebook"
+                  class="social-icon"
+                />
               </a>
             </div>
           </div>
-          <div class="footer__links">
-            <h4>Dịch Vụ</h4>
-            <ul>
-              <li><a href="#services">Lái xe theo giờ</a></li>
-              <li><a href="#services">Lái xe theo chuyến</a></li>
-              <li><a href="#services">Lái xe doanh nghiệp</a></li>
-              <li><a href="#services">Lái xe sự kiện</a></li>
+
+          <!-- Column 2: Services -->
+          <div class="footer-column">
+            <h3 class="footer-title">Dịch Vụ</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Lái xe theo giờ</a></li>
+              <li><a href="#" class="footer-link">Lái xe theo chuyến</a></li>
+              <li><a href="#" class="footer-link">Lái xe doanh nghiệp</a></li>
+              <li><a href="#" class="footer-link">Lái xe sự kiện</a></li>
             </ul>
           </div>
-          <div class="footer__support">
-            <h4>Hỗ Trợ</h4>
-            <ul>
-              <li><a href="#pricing">Bảng giá</a></li>
-              <li><a href="#process">Quy trình</a></li>
-              <li><a href="#contact">Liên hệ</a></li>
-              <li><a href="#feedback">Đánh giá</a></li>
+
+          <!-- Column 3: Support -->
+          <div class="footer-column">
+            <h3 class="footer-title">Hỗ Trợ</h3>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Bảng giá</a></li>
+              <li><a href="#" class="footer-link">Quy trình</a></li>
+              <li><a href="#" class="footer-link">Liên hệ</a></li>
+              <li><a href="#" class="footer-link">Đánh giá</a></li>
             </ul>
           </div>
-          <div class="footer__contact">
-            <h4>Liên Hệ</h4>
-            <p>📞 0838 128 365</p>
-            <p>📧 dichvulaixeho365@gmail.com</p>
-            <p>📍 Địa chỉ công ty</p>
-            <p>🕐 24/7 - Phục vụ không ngừng nghỉ</p>
+
+          <!-- Column 4: Contact -->
+          <div class="footer-column">
+            <h3 class="footer-title">Liên Hệ</h3>
+            <ul class="footer-contact">
+              <li class="contact-info">
+                <span class="contact-icon">📞</span>
+                <span class="contact-detail">0838 128 365</span>
+              </li>
+              <li class="contact-info">
+                <span class="contact-icon">✉️</span>
+                <span class="contact-detail">dichvulaixeho365@gmail.com</span>
+              </li>
+
+              <li class="contact-info">
+                <span class="contact-icon">🕐</span>
+                <span class="contact-detail"
+                  >24/7 - Phục vụ không ngừng nghỉ</span
+                >
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="footer__bottom">
-          <p>&copy; 2025 Dịch vụ lái xe hộ</p>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2025 Dịch vụ lái xe hộ</p>
+          </div>
         </div>
       </div>
     </footer>
-    <a href="https://zalo.me/0838128365" class="zalo-link">
-      <img src="images/zalo.png" alt="Zalo" />
-    </a>
 
-    <a href="tel:0838128365" class="call-now" title="Gọi ngay">
-      <i class="fa-solid fa-phone"></i>
-    </a>
-    <!-- Back to Top Button -->
-
-    <button id="back-to-top" class="back-to-top">↑</button>
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script-new.js?v=1.0.4"></script>
+    <!-- Floating Action Buttons -->
+    <div class="floating-buttons">
+      <a
+        href="tel:0838128365"
+        class="floating-btn floating-phone"
+        title="Gọi điện thoại"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://zalo.me/0838128365"
+        class="floating-btn floating-zalo"
+        title="Chat qua Zalo"
+      >
+        <img src="images/zalo.png" alt="Zalo" class="zalo-icon" />
+      </a>
+    </div>
   </body>
 </html>
