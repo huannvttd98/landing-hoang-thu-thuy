@@ -2490,20 +2490,7 @@ h6,
 
 /* Tooltip khi hover */
 .floating-phone:hover::after {
-  content: 'Gọi ngay';
-  position: absolute;
-  top: -45px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
-  white-space: nowrap;
-  animation: tooltip-fade-in 0.3s ease-out;
-  z-index: 10;
+
 }
 
 .floating-zalo {
