@@ -575,7 +575,7 @@ h6,
 
 /* Stats Section */
 .stats-section {
-  padding: 100px 0;
+  padding: 30px 0;
   background: #ffffff;
 }
 
@@ -891,7 +891,7 @@ h6,
 
 /* Conversion Rate Section */
 .conversion-section {
-  padding: 100px 0;
+  padding: 30px 0;
   background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
   position: relative;
   overflow: hidden;
@@ -1112,7 +1112,7 @@ h6,
 
 /* Customer Retention Section */
 .retention-section {
-  padding: 100px 0;
+  padding: 30px 0;
   background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
   position: relative;
   overflow: hidden;
@@ -1331,7 +1331,7 @@ h6,
 
 /* Pricing Section */
 .pricing-section {
-  padding: 100px 0;
+  padding: 30px 0;
   background: #ffffff;
 }
 
@@ -1351,7 +1351,7 @@ h6,
 .pricing-subtitle {
   font-size: 18px;
   color: #6b7280;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .pricing-cards {
@@ -1503,7 +1503,7 @@ h6,
 
 /* Testimonials Section */
 .testimonials-section {
-  padding: 100px 0;
+  padding: 30px 0;
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   position: relative;
 }
@@ -1916,7 +1916,7 @@ h6,
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr;
   gap: 60px;
   margin-bottom: 40px;
 }
