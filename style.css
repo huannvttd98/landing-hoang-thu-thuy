@@ -2456,12 +2456,80 @@ h6,
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: float 3s ease-in-out infinite;
+  position: relative;
 }
 
 .floating-phone {
   background: linear-gradient(135deg, #b91010 0%, #960518 100%);
   color: white;
-  animation-delay: 0s;
+  animation: livechat-phone 4s ease-in-out infinite;
+  position: relative;
+}
+
+/* Thêm hiệu ứng ring (vòng tròn lan tỏa) */
+.floating-phone::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #b91010;
+  border-radius: 50%;
+  animation: phone-ring 2s ease-out infinite;
+  opacity: 0;
+  z-index: -1;
+}
+
+.floating-phone::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border: 2px solid #b91010;
+  border-radius: 50%;
+  animation: phone-ring 2s ease-out infinite 0.5s;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Notification Badge */
+.notification-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  background: #ff4444;
+  border: 2px solid white;
+  border-radius: 50%;
+  animation: notification-pulse 2s ease-in-out infinite;
+  z-index: 10;
+}
+
+/* Ẩn badge khi hover */
+.floating-phone:hover .notification-badge {
+  display: none;
+}
+
+/* Tooltip khi hover */
+.floating-phone:hover::after {
+  content: 'Gọi ngay';
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  animation: tooltip-fade-in 0.3s ease-out;
+  z-index: 10;
 }
 
 .floating-zalo {
@@ -2475,7 +2543,9 @@ h6,
 }
 
 .floating-phone:hover {
-  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 30px rgba(185, 16, 16, 0.4);
+  animation: phone-shake 0.6s ease-in-out infinite;
+  transform: translateY(-5px) scale(1.1);
 }
 
 .floating-zalo:hover {
@@ -2492,7 +2562,7 @@ h6,
   height: 90%;
 }
 
-/* Floating Animation */
+/* Floating Animation - Cải tiến cho livechat */
 @keyframes float {
   0%,
   100% {
@@ -2500,6 +2570,81 @@ h6,
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+/* Animation chính cho button gọi điện - Livechat style */
+@keyframes livechat-phone {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  10% {
+    transform: translateY(-8px) scale(1.05);
+  }
+  30% {
+    transform: translateY(-5px) scale(1.02);
+  }
+  40% {
+    transform: translateY(-8px) scale(1.05);
+  }
+  60% {
+    transform: translateY(-3px) scale(1.01);
+  }
+  70% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+/* Hiệu ứng vòng tròn lan tỏa khi gọi điện */
+@keyframes phone-ring {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Hiệu ứng shake (rung) khi hover */
+@keyframes phone-shake {
+  0%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-3deg); }
+  20% { transform: rotate(3deg); }
+  30% { transform: rotate(-3deg); }
+  40% { transform: rotate(3deg); }
+  50% { transform: rotate(-3deg); }
+  60% { transform: rotate(3deg); }
+  70% { transform: rotate(-3deg); }
+  80% { transform: rotate(3deg); }
+  90% { transform: rotate(-3deg); }
+}
+
+/* Animation cho notification pulse */
+@keyframes notification-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}
+
+/* Animation cho tooltip */
+@keyframes tooltip-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 }
 
