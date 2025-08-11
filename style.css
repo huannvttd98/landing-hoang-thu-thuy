@@ -1501,6 +1501,191 @@ h6,
   border-color: #d1d5db;
 }
 
+/* Booking Methods Section */
+.booking-methods-section {
+  padding: 30px 0;
+  background: linear-gradient(135deg, #e2fefc 0%, #fff7ed 100%);
+  position: relative;
+}
+
+.booking-methods-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.booking-methods-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.booking-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 1.3;
+}
+
+.booking-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.booking-method-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-method-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.booking-method-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.booking-method-card:hover::before {
+  transform: scaleX(1);
+}
+
+.method-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.method-icon-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.booking-method-card:hover .method-icon {
+  transform: scale(1.1);
+}
+
+.method-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.method-description {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.method-description-centered {
+  text-align: justify;
+  padding: 0 15px;
+  text-align-last: center;
+}
+
+.method-highlight {
+  font-size: 14px;
+  color: #3b82f6;
+  font-weight: 500;
+  background: #f0f9ff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border-left: 3px solid #3b82f6;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* Mobile responsiveness for booking methods */
+@media (max-width: 1024px) {
+  .booking-methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-methods-section {
+    padding: 60px 0;
+  }
+
+  .booking-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  .booking-methods-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .booking-method-card {
+    padding: 30px 25px;
+  }
+
+  .method-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+  }
+
+  .method-icon-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .method-title {
+    font-size: 20px;
+  }
+
+  .method-description {
+    font-size: 15px;
+  }
+
+  .method-highlight {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
 /* Testimonials Section */
 .testimonials-section {
   padding: 30px 0;
