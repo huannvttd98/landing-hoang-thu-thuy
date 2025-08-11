@@ -337,6 +337,15 @@ body {
   color: #333;
 }
 
+/* Remove underline from all links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 /* Typography - Headings */
 h1,
 h2,
@@ -1360,6 +1369,52 @@ h6,
   padding: 32px 24px;
   position: relative;
   transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Shiny border effect */
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    transparent,
+    #fbbf24,
+    #f59e0b,
+    #3b82f6,
+    #1d4ed8,
+    #8b5cf6,
+    #7c3aed,
+    transparent,
+    transparent
+  );
+  background-size: 200% 200%;
+  border-radius: 18px;
+  z-index: -1;
+  animation: shiny-border 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pricing-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes shiny-border {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .pricing-card:hover {
