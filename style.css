@@ -1756,7 +1756,7 @@ h6,
 
 .qr-img {
   border-radius: 8px;
-  width: 100px;
+  width: 200px;
   display: block;
   margin: auto;
 }
@@ -1767,6 +1767,7 @@ h6,
   text-align: center;
   max-width: 120px;
   line-height: 1.3;
+  margin: auto;
 }
 
 .zalo-section {
