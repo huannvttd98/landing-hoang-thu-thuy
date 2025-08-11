@@ -1417,28 +1417,6 @@ h6,
   }
 }
 
-.pricing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.pricing-card-featured {
-  border-color: #3b82f6;
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
-}
-
-.pricing-card-featured::before {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #3b82f6;
-  color: white;
-  padding: 6px 20px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-}
 
 .pricing-header {
   text-align: center;
@@ -1777,9 +1755,10 @@ h6,
 }
 
 .qr-img {
+  border-radius: 8px;
   width: 100px;
-  height: 100px;
   display: block;
+  margin: auto;
 }
 
 .qr-label {
@@ -2117,6 +2096,7 @@ h6,
     gap: 40px;
     text-align: center;
     padding: 20px;
+    margin-bottom: 20px;
   }
 
   .why-zstep-title {
