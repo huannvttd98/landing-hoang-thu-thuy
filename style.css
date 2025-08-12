@@ -646,6 +646,8 @@ body.menu-open {
 .stats-section {
   padding: 30px 0;
   background: #ffffff;
+  background: linear-gradient(135deg, #e2fefc 0%, #fff7ed 100%);
+
 }
 
 .stats-content {
@@ -653,6 +655,7 @@ body.menu-open {
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+
 }
 
 .stats-image {
@@ -840,6 +843,8 @@ body.menu-open {
 .why-zstep-section {
   padding: 30px 0;
   background: #f8fafc;
+     background: linear-gradient(135deg, #e2fefc 0%, #fff7ed 100%);
+
 }
 
 .why-zstep-content {
@@ -2375,11 +2380,13 @@ body.menu-open {
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
+
   }
 
   .stats-text {
     padding-left: 0;
     width: 100%;
+
   }
 
   .stats-title {
