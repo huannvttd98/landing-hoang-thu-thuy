@@ -2340,6 +2340,7 @@ body.menu-open {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .nav-menu.active {
@@ -2373,6 +2374,7 @@ body.menu-open {
     text-align: center;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .stats-text {
@@ -2405,6 +2407,7 @@ body.menu-open {
     margin-bottom: 20px;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .why-zstep-title {
@@ -2430,6 +2433,7 @@ body.menu-open {
     text-align: center;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .conversion-text {
@@ -2447,6 +2451,7 @@ body.menu-open {
     order: -1;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .retention-content {
@@ -2455,6 +2460,7 @@ body.menu-open {
     text-align: center;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .retention-text {
@@ -2492,6 +2498,7 @@ body.menu-open {
     gap: 40px;
     width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .testimonials-title {
@@ -2504,6 +2511,7 @@ body.menu-open {
     flex-direction: row;
     justify-content: center;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .stat-bubble-green {
@@ -2853,6 +2861,7 @@ body.menu-open {
     padding: 0 10px !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
+    overflow-y: hidden !important;
   }
 
   .hero-title {
@@ -2877,6 +2886,7 @@ body.menu-open {
     transition: left 0.3s ease;
     z-index: 1000;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   .nav-menu.active {
