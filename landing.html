@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dịch Vụ Lái Xe Hộ 365 - Chuyên Nghiệp, An Toàn, Uy Tín</title>
+    <meta
+      name="description"
+      content="Dịch vụ lái xe hộ chuyên nghiệp 24/7. Thuê lái xe theo chuyến, theo giờ, theo yêu cầu. An toàn - Đúng giờ - Uy tín."
+    />
+    <meta
+      name="keywords"
+      content="lái xe hộ, thuê lái xe, tài xế hộ gia đình, dịch vụ lái xe"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Dịch Vụ Lái Xe Hộ 365 - Chuyên Nghiệp 24/7"
+    />
+    <meta
+      property="og:description"
+      content="Dịch vụ lái xe hộ uy tín, an toàn, đúng giờ. Phục vụ 24/7 mọi nhu cầu di chuyển."
+    />
+    <meta property="og:image" content="./images/banner.png" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Custom TailwindCSS Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2596be',
+              'primary-dark': '#1f7a98',
+              'primary-light': '#42a6d1',
+              secondary: '#10b981',
+              accent: '#f97316',
+              warning: '#f59e0b',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #2596be 0%, #1f7a98 100%);
+      }
+
+      .card-shadow {
+        box-shadow: 0 10px 25px rgba(37, 150, 190, 0.1);
+      }
+
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(37, 150, 190, 0.2);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #2596be 0%, #42a6d1 100%);
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #1f7a98 0%, #2596be 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(37, 150, 190, 0.3);
+      }
+
+      .pricing-popular {
+        border: 3px solid #2596be;
+        position: relative;
+      }
+
+      .pricing-popular::before {
+        content: 'PHỔ BIẾN';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(135deg, #2596be 0%, #42a6d1 100%);
+        color: white;
+        padding: 5px 20px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body class="font-sans">
+    <!-- Header/Navigation -->
+    <header
+      class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg"
+    >
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <div
+              class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center"
+            >
+              <i class="fas fa-car text-white text-xl"></i>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-gray-800">Lái Xe Hộ 365</h1>
+              <p class="text-xs text-primary">Chuyên nghiệp - Uy tín</p>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Trang chủ</a
+            >
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Dịch vụ</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Bảng giá</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Liên hệ</a
+            >
+          </div>
+
+          <!-- Hotline Button -->
+          <div class="hidden md:block">
+            <a
+              href="tel:0123456789"
+              class="btn-primary text-white px-6 py-2 rounded-full font-semibold flex items-center space-x-2"
+            >
+              <i class="fas fa-phone"></i>
+              <span>0123.456.789</span>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t pt-4">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Trang chủ</a
+            >
+            <a
+              href="#services"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Dịch vụ</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Bảng giá</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-primary transition-colors"
+              >Liên hệ</a
+            >
+            <a
+              href="tel:0123456789"
+              class="btn-primary text-white px-6 py-2 rounded-full font-semibold text-center"
+            >
+              <i class="fas fa-phone mr-2"></i>0123.456.789
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center pt-20">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Hero Content -->
+          <div
+            class="text-white"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              Dịch Vụ Lái Xe Hộ<br />
+              <span class="text-yellow-300">Chuyên Nghiệp 24/7</span>
+            </h1>
+            <p class="text-xl lg:text-2xl mb-8 text-blue-100">
+              An toàn - Đúng giờ - Uy tín
+            </p>
+            <p class="text-lg mb-10 text-blue-100">
+              Dịch vụ lái xe hộ chuyên nghiệp, phục vụ mọi nhu cầu di chuyển của
+              bạn. Tài xế giàu kinh nghiệm, thông thạo đường sá, cam kết an toàn
+              tuyệt đối.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                class="bg-accent hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 text-center"
+              >
+                <i class="fas fa-car mr-2"></i>Đặt xe ngay
+              </a>
+              <a
+                href="#pricing"
+                class="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm text-center"
+              >
+                <i class="fas fa-dollar-sign mr-2"></i>Xem bảng giá
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div
+            class="relative"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="relative z-10">
+              <img
+                src="./images/driving-bro.png"
+                alt="Dịch vụ lái xe hộ chuyên nghiệp"
+                class="w-full max-w-lg mx-auto"
+              />
+            </div>
+            <!-- Decorative Elements -->
+            <div
+              class="absolute top-10 left-10 w-20 h-20 bg-yellow-300/30 rounded-full blur-xl"
+            ></div>
+            <div
+              class="absolute bottom-10 right-10 w-32 h-32 bg-white/20 rounded-full blur-xl"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            CÁC DỊCH VỤ CỦA CHÚNG TÔI
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Đa dạng các dịch vụ lái xe hộ phù hợp với mọi nhu cầu của bạn
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded-2xl p-8 card-shadow hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-route text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Thuê lái xe theo chuyến
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Dịch vụ lái xe hộ chuyên nghiệp, phục vụ theo lộ trình & quãng
+              đường đã đặt trước.
+            </p>
+            <p class="text-primary font-semibold">
+              Phù hợp cho: Tiếp khách, liên hoan, dự tiệc, chúc Tết
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded-2xl p-8 card-shadow hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-clock text-secondary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Thuê lái xe theo giờ
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Thuê lái xe theo giờ linh hoạt: 4h, 8h, 12h hoặc theo yêu cầu của
+              bạn.
+            </p>
+            <p class="text-secondary font-semibold">
+              Phù hợp cho: Họp hành, tổ chức sự kiện, gặp gỡ đối tác
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded-2xl p-8 card-shadow hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-star text-accent text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Lái xe hộ theo yêu cầu
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Đáp ứng mọi nhu cầu: đi công tác, về quê, chơi golf, đón tiễn sân
+              bay...
+            </p>
+            <p class="text-accent font-semibold">
+              Phù hợp cho: Công tác, về quê, sân bay, mọi nhu cầu 24/7
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            VÌ SAO KHÁCH HÀNG TIN TƯỞNG CHÚNG TÔI
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Những lý do khiến hàng nghìn khách hàng lựa chọn dịch vụ của chúng
+            tôi
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Feature 1 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-headset text-primary text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Hỗ trợ 24/7</h3>
+            <p class="text-gray-600">
+              Chỉ cần cho chúng tôi biết điểm đi, điểm đến và thời gian. Chúng
+              tôi sẽ sắp xếp tài xế phù hợp nhất cho bạn.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-shield-alt text-secondary text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              An toàn tuyệt đối
+            </h3>
+            <p class="text-gray-600">
+              Luôn kiểm tra, đảm bảo xe & tài sản của khách an toàn trước –
+              trong – sau chuyến đi.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-heart text-accent text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Thân thiện & tận tâm
+            </h3>
+            <p class="text-gray-600">
+              Không chỉ lái xe, chúng tôi đồng hành cùng bạn: hỗ trợ lên xuống
+              xe, mang hành lý.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div
+              class="w-20 h-20 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-bolt text-warning text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Nhanh chóng - Đúng giờ
+            </h3>
+            <p class="text-gray-600">
+              Tài xế có nhiều năm kinh nghiệm. Đảm bảo đưa bạn đến nơi đúng giờ,
+              đúng hẹn.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            BẢNG GIÁ DỊCH VỤ
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Bảng giá minh bạch, cạnh tranh cho mọi khung thời gian
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Pricing 1 -->
+          <div
+            class="bg-white rounded-2xl p-8 card-shadow hover-lift"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">Trước 22h</h3>
+              <p class="text-gray-600 mb-6">Khung giờ hành chính</p>
+
+              <div class="space-y-4 mb-8">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">5km đầu:</span>
+                  <span class="font-bold text-primary text-xl"
+                    >250.000 VNĐ</span
+                  >
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Từ 6-10 Km:</span>
+                  <span class="font-semibold text-gray-800">+20K/km</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Trên 10km:</span>
+                  <span class="font-semibold text-gray-800">+15K/km</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Phí chờ:</span>
+                  <span class="font-semibold text-gray-800">30K/30p</span>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="w-full btn-primary text-white px-6 py-3 rounded-full font-semibold inline-block text-center"
+              >
+                Đặt ngay
+              </a>
+            </div>
+          </div>
+
+          <!-- Pricing 2 - Popular -->
+          <div
+            class="bg-white rounded-2xl p-8 card-shadow hover-lift pricing-popular"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                Từ 22h - 24h
+              </h3>
+              <p class="text-gray-600 mb-6">Khung giờ tối</p>
+
+              <div class="space-y-4 mb-8">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">5km đầu:</span>
+                  <span class="font-bold text-primary text-xl"
+                    >270.000 VNĐ</span
+                  >
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Từ 6-10 Km:</span>
+                  <span class="font-semibold text-gray-800">+25K/km</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Trên 10km:</span>
+                  <span class="font-semibold text-gray-800">+20K/km</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Phí chờ:</span>
+                  <span class="font-semibold text-gray-800">50K/30p</span>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="w-full btn-primary text-white px-6 py-3 rounded-full font-semibold inline-block text-center"
+              >
+                Đặt ngay
+              </a>
+            </div>
+          </div>
+
+          <!-- Pricing 3 -->
+          <div
+            class="bg-white rounded-2xl p-8 card-shadow hover-lift"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="text-center">
+              <h3 class="text-2xl font-bold text-gray-800 mb-2">Sau 24h</h3>
+              <p class="text-gray-600 mb-6">Khung giờ đêm khuya</p>
+
+              <div class="space-y-4 mb-8">
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">5km đầu:</span>
+                  <span class="font-bold text-primary text-xl"
+                    >299.000 VNĐ</span
+                  >
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Từ 6-10 Km:</span>
+                  <span class="font-semibold text-gray-800">+25K/km</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Trên 10km:</span>
+                  <span class="font-semibold text-gray-800">+20K/km</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-600">Phí chờ:</span>
+                  <span class="font-semibold text-gray-800">70K/30p</span>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                class="w-full btn-primary text-white px-6 py-3 rounded-full font-semibold inline-block text-center"
+              >
+                Đặt ngay
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Notes -->
+        <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
+          <div
+            class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 max-w-2xl mx-auto"
+          >
+            <div class="flex items-center justify-center mb-4">
+              <i class="fas fa-info-circle text-yellow-600 text-xl mr-2"></i>
+              <h4 class="font-semibold text-yellow-800">Lưu ý quan trọng</h4>
+            </div>
+            <div class="space-y-2 text-yellow-700">
+              <p><strong>Phụ thu mưa:</strong> 30.000 VNĐ (hỗ trợ tài xế)</p>
+              <p><strong>Trên 30km:</strong> Thỏa thuận giá cả</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact/Booking Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            PHƯƠNG THỨC ĐẶT LÁI XE HỘ
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Nhiều cách thức liên hệ tiện lợi, phản hồi nhanh chóng 24/7
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Contact Method 1 -->
+          <div
+            class="text-center bg-gray-50 rounded-2xl p-8 hover-lift"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-phone text-primary text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Gọi trực tiếp Hotline
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Liên hệ ngay để được tư vấn và đặt tài xế nhanh nhất. Đội ngũ tư
+              vấn 24/7 sẽ hỗ trợ bạn.
+            </p>
+            <a
+              href="tel:0123456789"
+              class="btn-primary text-white px-6 py-3 rounded-full font-semibold inline-block"
+            >
+              <i class="fas fa-phone mr-2"></i>0123.456.789
+            </a>
+          </div>
+
+          <!-- Contact Method 2 -->
+          <div
+            class="text-center bg-gray-50 rounded-2xl p-8 hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fab fa-zalo text-secondary text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Liên hệ qua Zalo
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Nhắn tin hoặc gọi video qua Zalo để đặt xe, gửi lộ trình và nhận
+              báo giá nhanh chóng.
+            </p>
+            <div class="mb-4">
+              <img
+                src="./images/qr_zalo.png"
+                alt="QR Code Zalo"
+                class="w-32 h-32 mx-auto rounded-lg"
+              />
+            </div>
+            <a
+              href="https://zalo.me/0123456789"
+              class="bg-secondary hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold inline-block transition-colors"
+            >
+              <i class="fab fa-zalo mr-2"></i>Chat Zalo
+            </a>
+          </div>
+
+          <!-- Contact Method 3 -->
+          <div
+            class="text-center bg-gray-50 rounded-2xl p-8 hover-lift"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
+            <div
+              class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fab fa-facebook text-blue-600 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Đặt qua Facebook
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Kết nối với chúng tôi qua Fanpage, gửi tin nhắn trực tiếp để được
+              tư vấn và xác nhận chuyến đi.
+            </p>
+            <a
+              href="https://facebook.com/laixeho365"
+              class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold inline-block transition-colors"
+            >
+              <i class="fab fa-facebook mr-2"></i>Fanpage
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 gradient-bg">
+      <div class="container mx-auto px-4 text-center">
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6">
+            SẴN SÀNG PHỤC VỤ BẠN 24/7
+          </h2>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Đừng chần chừ! Hãy liên hệ ngay để trải nghiệm dịch vụ lái xe hộ
+            chuyên nghiệp, an toàn và uy tín nhất thành phố.
+          </p>
+
+          <div
+            class="flex flex-col sm:flex-row gap-6 justify-center"
+            data-aos="flip-up"
+            data-aos-delay="200"
+          >
+            <a
+              href="tel:0123456789"
+              class="bg-accent hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all duration-300 inline-block"
+            >
+              <i class="fas fa-phone mr-3"></i>Gọi ngay: 0123.456.789
+            </a>
+            <a
+              href="https://zalo.me/0123456789"
+              class="bg-secondary hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold text-xl transition-all duration-300 inline-block"
+            >
+              <i class="fab fa-zalo mr-3"></i>Chat Zalo ngay
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div>
+            <div class="flex items-center space-x-2 mb-6">
+              <div
+                class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center"
+              >
+                <i class="fas fa-car text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold">Lái Xe Hộ 365</h3>
+                <p class="text-sm text-gray-400">Chuyên nghiệp - Uy tín</p>
+              </div>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Dịch vụ lái xe hộ chuyên nghiệp hàng đầu, phục vụ 24/7 với chất
+              lượng uy tín, an toàn tuyệt đối.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Liên kết nhanh</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Trang chủ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Dịch vụ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Bảng giá</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-primary transition-colors"
+                  >Liên hệ</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Dịch vụ</h4>
+            <ul class="space-y-3 text-gray-400">
+              <li>Thuê lái xe theo chuyến</li>
+              <li>Thuê lái xe theo giờ</li>
+              <li>Lái xe hộ theo yêu cầu</li>
+              <li>Đón tiễn sân bay</li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Thông tin liên hệ</h4>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-phone text-primary"></i>
+                <span class="text-gray-400">0123.456.789</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-envelope text-primary"></i>
+                <span class="text-gray-400">info@laixeho365.com</span>
+              </div>
+              <div class="flex items-center space-x-3">
+                <i class="fas fa-map-marker-alt text-primary"></i>
+                <span class="text-gray-400">Hà Nội, Việt Nam</span>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex space-x-4 mt-6">
+              <a
+                href="#"
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="fab fa-facebook text-primary hover:text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="fab fa-zalo text-primary hover:text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="fab fa-youtube text-primary hover:text-white"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">
+            © 2025 Lái Xe Hộ 365. Tất cả quyền được bảo lưu.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
