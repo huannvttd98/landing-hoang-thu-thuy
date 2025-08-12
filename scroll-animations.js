@@ -30,7 +30,6 @@ class ScrollAnimations {
   }
 
   setupAnimations() {
-    console.log('Setting up scroll animations...');
     // Add animation classes to elements
     this.addAnimationClasses();
 
@@ -46,10 +45,15 @@ class ScrollAnimations {
       heroContent.classList.add('scroll-animation', 'hero-content');
     if (heroImage) heroImage.classList.add('scroll-animation', 'hero-image');
 
-    // Section titles
-    const sectionTitles = document.querySelectorAll('h2, .section-title');
+    // Section titles (exclude header titles)
+    const sectionTitles = document.querySelectorAll(
+      'h2:not(.header h2), .section-title'
+    );
     sectionTitles.forEach(title => {
-      if (!title.classList.contains('scroll-animation')) {
+      if (
+        !title.classList.contains('scroll-animation') &&
+        !title.closest('.header')
+      ) {
         title.classList.add('scroll-animation', 'section-title');
       }
     });
@@ -57,7 +61,6 @@ class ScrollAnimations {
     // Stats Section - add specific handling
     const statsImage = document.querySelector('.stats-image');
     const statsText = document.querySelector('.stats-text');
-    console.log('Stats elements found:', { statsImage, statsText });
     if (statsImage) {
       statsImage.classList.add('scroll-animation');
     }
@@ -67,7 +70,6 @@ class ScrollAnimations {
 
     // Feature cards specifically
     const featureCards = document.querySelectorAll('.feature-card');
-    console.log('Feature cards found:', featureCards.length);
     featureCards.forEach((card, index) => {
       card.classList.add('scroll-animation', 'fade-in', 'stagger-animation');
     });
@@ -90,8 +92,10 @@ class ScrollAnimations {
       priceTable.classList.add('scroll-animation', 'fade-in');
     }
 
-    // Images in content
-    const contentImages = document.querySelectorAll('img:not(.hero img)');
+    // Images in content (exclude header/logo images)
+    const contentImages = document.querySelectorAll(
+      'img:not(.hero img):not(.header img):not(.logo img)'
+    );
     contentImages.forEach((img, index) => {
       if (index % 2 === 0) {
         img.classList.add('scroll-animation', 'fade-in-left');
@@ -119,12 +123,16 @@ class ScrollAnimations {
       element.classList.add('scroll-animation', 'fade-in', 'stagger-animation');
     });
 
-    // Generic elements with common classes
+    // Generic elements with common classes (exclude navigation)
     const genericElements = document.querySelectorAll(
-      '.box, .container > div, .content, .info'
+      '.box, .container > div:not(.header-content), .content, .info'
     );
     genericElements.forEach((element, index) => {
-      if (!element.classList.contains('scroll-animation')) {
+      if (
+        !element.classList.contains('scroll-animation') &&
+        !element.closest('.header') &&
+        !element.closest('.navigation')
+      ) {
         element.classList.add(
           'scroll-animation',
           'fade-in',
@@ -158,7 +166,6 @@ class ScrollAnimations {
   observeElements() {
     // Observe all elements with scroll-animation class
     const animatedElements = document.querySelectorAll('.scroll-animation');
-    console.log('Total elements to animate:', animatedElements.length);
     animatedElements.forEach(element => {
       this.observer.observe(element);
     });

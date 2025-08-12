@@ -1,10 +1,52 @@
+/* Navigation elements should not be affected by scroll animations */
+.header,
+.header *,
+.navigation,
+.navigation *,
+.nav-menu,
+.nav-menu *,
+.mobile-menu-toggle,
+.mobile-menu-toggle *,
+.logo,
+.logo *,
+.header-content,
+.header-content *,
+.header-actions,
+.header-actions * {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* Override for mobile navigation transitions */
+.nav-menu {
+  transition: left 0.3s ease !important;
+}
+
+.mobile-menu-toggle span {
+  transition: all 0.3s ease !important;
+}
+
+/* Mobile menu specific fixes */
+@media (max-width: 768px) {
+  .nav-menu {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .nav-menu.active {
+    opacity: 1 !important;
+    transform: none !important;
+    left: 0 !important;
+  }
+}
+
 /* Scroll Animations */
-.scroll-animation {
+.scroll-animation:not(.nav-menu):not(.mobile-menu-toggle) {
   opacity: 0;
   transition: all 0.8s ease-out;
 }
 
-.scroll-animation.animate {
+.scroll-animation.animate:not(.nav-menu):not(.mobile-menu-toggle) {
   opacity: 1;
 }
 
