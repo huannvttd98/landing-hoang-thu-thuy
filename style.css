@@ -1469,7 +1469,6 @@ body.menu-open {
   }
 }
 
-
 .pricing-header {
   text-align: center;
   margin-bottom: 32px;
@@ -1567,9 +1566,16 @@ body.menu-open {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 30%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
+  background-image: radial-gradient(
+      circle at 20% 30%,
+      rgba(251, 191, 36, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(59, 130, 246, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -2259,7 +2265,7 @@ body.menu-open {
     gap: 16px;
     padding: 10px 20px;
   }
-  .stat-card{
+  .stat-card {
     display: none;
   }
   .header-actions {
@@ -2572,10 +2578,10 @@ body.menu-open {
 
 /* Tooltip khi hover */
 .floating-phone:hover::after {
-
 }
 
-.floating-zalo {
+.floating-zalo,
+.floating-facebook {
   background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
   animation-delay: 1.5s;
 }
@@ -2604,6 +2610,10 @@ body.menu-open {
   width: 90%;
   height: 90%;
 }
+.floating-phone img {
+  width: 90%;
+  height: 90%;
+}
 
 /* Floating Animation - Cải tiến cho livechat */
 @keyframes float {
@@ -2618,7 +2628,11 @@ body.menu-open {
 
 /* Animation chính cho button gọi điện - Livechat style */
 @keyframes livechat-phone {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) scale(1);
   }
   10% {
@@ -2655,21 +2669,43 @@ body.menu-open {
 
 /* Hiệu ứng shake (rung) khi hover */
 @keyframes phone-shake {
-  0%, 100% { transform: rotate(0deg); }
-  10% { transform: rotate(-3deg); }
-  20% { transform: rotate(3deg); }
-  30% { transform: rotate(-3deg); }
-  40% { transform: rotate(3deg); }
-  50% { transform: rotate(-3deg); }
-  60% { transform: rotate(3deg); }
-  70% { transform: rotate(-3deg); }
-  80% { transform: rotate(3deg); }
-  90% { transform: rotate(-3deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-3deg);
+  }
+  20% {
+    transform: rotate(3deg);
+  }
+  30% {
+    transform: rotate(-3deg);
+  }
+  40% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  60% {
+    transform: rotate(3deg);
+  }
+  70% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(3deg);
+  }
+  90% {
+    transform: rotate(-3deg);
+  }
 }
 
 /* Animation cho notification pulse */
 @keyframes notification-pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -2778,7 +2814,6 @@ body.menu-open {
   }
 }
 
-
 .testimonial-img {
   width: 100%;
   height: auto;
@@ -2882,7 +2917,12 @@ body.menu-open {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -2914,4 +2954,47 @@ body.menu-open {
   border-color: #e5e7eb;
   transform: none;
   box-shadow: none;
+}
+
+.btn-ring {
+  color: white;
+  animation: livechat-phone 4s ease-in-out infinite;
+  position: relative;
+}
+
+/* Thêm hiệu ứng ring (vòng tròn lan tỏa) */
+.btn-ring::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px solid #1029b9;
+  border-radius: 50%;
+  animation: phone-ring 2s ease-out infinite;
+  opacity: 0;
+  z-index: -1;
+}
+
+.btn-ring::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border: 2px solid #1097b9;
+  border-radius: 50%;
+  animation: phone-ring 2s ease-out infinite 0.5s;
+  opacity: 0;
+  z-index: -1;
+}
+/* Ẩn badge khi hover */
+.btn-ring:hover .notification-badge {
+  display: none;
+}
+.btn-ring img {
+  width: 90%;
+  height: auto;
 }
